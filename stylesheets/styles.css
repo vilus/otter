@@ -1,10 +1,20 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
   background: rgb(149, 194, 215);
 }
 
 a[href="#"] {
   text-decoration: none;
+}
+
+.main-header {
+  flex: 01 auto;
 }
 
 .logo-text {
@@ -15,29 +25,67 @@ a[href="#"] {
   font-size: 37px;
 }
 
-.thumbnail-list {
-  list-style: none;
+.main-content {
+  flex: 11 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.thumbnail-item + .thumbnail-item {
-  margin-top: 10px;
+.thumbnail-list {
+  flex: 01 auto;
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .thumbnail-item {
-  display: block;
+  padding: 1px;
+  min-width: 120px;
+  max-width: 120px;
+  text-align: center;
 }
 
 .thumbnail-image {
-  display: block;
-  padding: 0;
-  width: 50%;
+  width: 80%;
+  min-height: 120px;
 }
 
 .thumbnail-title {
   display: block;
-  margin: 0;
+  text-align: left;
   padding: 4px 10px;
 
   background: rgb(96, 125, 139);
   color: rgb(202, 238, 255);
+}
+
+.detail-image-container {
+  flex: 11 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-image-frame {
+  position: relative;
+  text-align: center;
+}
+
+.detail-image {
+  width: 90%;
+  min-width: 240px;
+}
+
+.detail-image-title {
+  position: absolute;
+  bottom: -6px;
+  left: -14px;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+  font-size: 40px;
 }
