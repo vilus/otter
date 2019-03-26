@@ -9,7 +9,7 @@ body {
   background: rgb(149, 194, 215);
 }
 
-a[href="#"] {
+a {
   text-decoration: none;
 }
 
